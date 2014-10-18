@@ -42,41 +42,12 @@ router.route('/translate/:from/:to')
     //create a bear by by POST request
     .post(function(req, res) {
 
-        //console.log(req.body.text);
-        var client = new MsTranslator({
-            client_id: "dealBroker",
-            client_secret: "fPBvwgJ4ojz83PGGK0fOkoVYMosUL1C8VMuVATj33d4="
-        }, true);
 
-
-        var params = {
-            text: req.body.text,
-            from: req.params.from,
-            to: req.params.to
-        };
-
-        // Don't worry about access token, it will be auto-generated if needed.
-        client.translate(params, function(err, data) {
-            res.send(data);
-        });
 
     });
 router.route('/send/:email1/:email2')
     .post(function(req, res) {
-        var email = new sendgrid.Email({
-            to: req.params.email2,
-            from: req.params.email1,
-            subject: 'Deal Broker App',
-            text: req.body.text
-        });
 
-        console.log(email);
-        sendgrid.send(email, function(err, json) {
-            if (err) {
-                return console.error(err);
-            }
-            console.log(json);
-        });
     });
 
 

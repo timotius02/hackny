@@ -34,11 +34,7 @@
     "body-parser": "^1.9.0",
     "express": "^4.9.7",
     "imagemin-svgo": "^2.0.0",
-    "mstranslator": "^1.1.0",
-    "node-bourbon": "^1.2.3",
     "npm-which": "^1.0.1",
-    "q": "^1.0.1",
-    "sendgrid": "^1.2.1",
     "underscore": "^1.7.0"
   },
   "engines": {
