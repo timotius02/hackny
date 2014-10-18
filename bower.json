@@ -1,0 +1,8 @@
+{
+  "name": "hackny",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "angular-xeditable": "~0.1.8"
+  }
+}
