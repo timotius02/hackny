@@ -19,11 +19,18 @@ session.on('ServiceOpened', function(m) {
     if (m.correlations[0].value == service_refdata) {
         // Request the long-form company name for each security
         session.request('//blp/refdata', 'ReferenceDataRequest',
-            { securities: seclist, fields: ['LONG_COMP_NAME'] }, 100);
+            { securities: seclist, fields: [
+                        'LONG_COMP_NAME', 
+                        'TOT_COMP_AW_TO_CEO_&_EQUIV', 
+                        'TOT_SALARIES_PAID_TO_CEO_&_EQUIV', 
+                        'ALL_OTHER_COMP_AW_TO_CEO_&_EQUIV',
+                        'BOARD_SIZE',
+                        'NEWS_SENTIMENT'
+                        ] }, 100);
         // Request intraday tick data for each security, 10:30 - 14:30
         session.request('//blp/refdata', 'HistoricalDataRequest',
             { securities: seclist,
-              fields: ['PX_LAST', 'OPEN'],
+              fields: ['PX_LAST', 'OPEN', 'VOLUME'],
               startDate: "20120101",
               endDate: "20120301",
               periodicitySelection: "DAILY" }, 101);
