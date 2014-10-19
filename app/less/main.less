@@ -4,7 +4,7 @@
 // Global Styles
 
 body {
-    background-color: @gray-lightest;
+    background-color: @gray-dark;
 }
 
 // Wrappers
@@ -13,24 +13,33 @@ body {
     width: 100%;
 }
 
-#page-wrapper {
+.page-wrapper {
     padding: 0 15px;
     min-height: 568px;
-    background-color: white;
+    background-color: @black-light;
 }
 
 @media(min-width:768px) {
     #page-wrapper {
         position: inherit;
-        margin: 0 0 0 250px;
+        margin: 0 0 0 0;
         padding: 0 30px;
-        border-left: 1px solid darken(@gray-lightest, 6.5%);
     }
 }
 
 // Navigation
 
 // --Topbar
+.navbar-default {
+    background-color: @gray;
+    border: 0px;
+}
+
+.nav-tabs {
+    margin-left: 250px;
+    border: 0px;
+}
+
 
 .navbar-top-links li {
     display: inline-block;
@@ -181,7 +190,7 @@ body {
 .btn-info.btn-outline:hover,
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
-    color: white;
+    color: @black-light;
 }
 
 // Chat Widget
@@ -320,7 +329,7 @@ table.dataTable thead .sorting:after {
     border-color: @brand-success;
     .panel-heading {
         border-color: @brand-success;
-        color: white;
+        color: @black-light;
         background-color: @brand-success;
     }
     a {
@@ -335,7 +344,7 @@ table.dataTable thead .sorting:after {
     border-color: @brand-danger;
     .panel-heading {
         border-color: @brand-danger;
-        color: white;
+        color: @black-light;
         background-color: @brand-danger;
     }
     a {
@@ -350,7 +359,7 @@ table.dataTable thead .sorting:after {
     border-color: @brand-warning;
     .panel-heading {
         border-color: @brand-warning;
-        color: white;
+        color: @black-light;
         background-color: @brand-warning;
     }
     a {
